@@ -11,27 +11,27 @@ int main(void)
     {
         dollars = get_float("change owed: ");     
     }
-    while (dollars<=0);
+    while (dollars <= 0);
     
     cents = round(dollars * 100);
-    while (cents != 0 )
+    while (cents != 0)
     {
-        if (cents-25 > -0.1)
+        if (cents - 25 > -0.1)
         {
             cents -= 25;
             i++;
         }
-        else if (cents-10 > -0.1)
+        else if (cents - 10 > -0.1)
         {
             cents -= 10;
             i++;
         }
-        else if (cents-5 > -0.1)
-        {
+        else if (cents - 5 > -0.1)
+        { 
             cents -= 5;
             i++;
         }
-        else if (cents-1 > -0.1)
+        else if (cents - 1 > -0.1)
         {
             cents -= 1;
             i++;

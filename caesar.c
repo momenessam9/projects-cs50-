@@ -39,10 +39,6 @@ int main(int argc, string argv[])
                     cas = chr - key;
                     text[i] = toupper(cas);
                 }
-                else
-                {                  
-                    text[i] = toupper(cas);
-                }
             }
             else
             {

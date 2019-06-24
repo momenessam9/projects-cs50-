@@ -32,15 +32,11 @@ int main(int argc, string argv[])
             int chr = text[i];
             if (isupper(text[i]))
             {
-                printf("%c %i \n" , chr ,chr);
                 char cas = tolower(chr);
-                printf("%c %i \n" , cas ,cas);
                 text[i] = cas + key;
-                printf("%c %i \n" , text[i] ,text[i]);
                 if (text[i] <= 0 || text[i] == 127 || ispunct(text[i]))
                 {
                     cas = chr - key;
-                    printf("%c %i \n" , cas ,cas);
                     text[i] = toupper(cas);
                 }
                 else
@@ -59,7 +55,5 @@ int main(int argc, string argv[])
         }
     }
     printf("ciphertext: %s\n", text);
-    char ch = 'A';
-    printf("%c %i \n" , ch ,ch);
 }
 

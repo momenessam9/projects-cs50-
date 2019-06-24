@@ -23,7 +23,7 @@ int main(int argc, string argv[])
         }
     }
     
-    int key = atoi(argv[1]);
+    int key = atoi(argv[1])%26;
     string text = get_string("plaintext: ");
     for (int i = 0; i < strlen(text); i++)
     {

@@ -25,7 +25,7 @@ int main(int argc, string argv[])
         }
     }
     int key = atoi(argv[1]);
-    string text = get_string("plaintaxt: ");
+    string text = get_string("plaintext: ");
     for (int i = 0; i < strlen(text); i++)
     {
         if (isalpha(text[i]))

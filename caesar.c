@@ -23,37 +23,44 @@ int main(int argc, string argv[])
         }
     }
     
-    int key = atoi(argv[1])%26;
-    string text = get_string("plaintext: ");
+    int key = atoi(argv[1]) % 26;
+    string text = get_string("plaintext:  ");
+    bool cap;
+    int chr;
     for (int i = 0; i < strlen(text); i++)
     {
-        if (isalpha(text[i]))
+        chr = text[i];
+        cap = false;
+        printf("0yaay %c %i\n",  text[i],text[i]);
+        if (isupper(text[i]))
         {
-            int chr = text[i];
-            if (isupper(text[i]))
+            cap = true;
+            text[i] = tolower(text[i]);
+            printf("1yaay %c %i\n",  text[i],text[i]);
+        }
+        if (islower(text[i]))
+        {
+            int rem;
+            chr = text[i] + key;
+            printf("2yaay %c %i\n",  chr,chr);
+            if (chr > 122)
             {
-                char cas = tolower(chr);
-                text[i] = cas + key;
-                if (text[i] <= 0 || text[i] == 127 || ispunct(text[i]))
-                {
-                    cas = chr - key;
-                    text[i] = toupper(cas);
-                }
-                else
-                {
-                    text[i] = toupper(text[i]);
-                }
+                rem = chr - 122;
+                text[i] = 96 + rem;
+                printf("3yaay %c %i\n",  text[i],text[i]);
             }
             else
             {
-                text[i] = chr + key;
+                text[i] = chr;
             }
-            if (text[i] <= 0 || text[i] == 127 || ispunct(text[i]))
+            if (cap)
             {
-                text[i] = chr - key;
+                text[i] = toupper(text[i]);
+                printf("4yaay %c %i\n",  text[i],text[i]);
             }
         }
+           
     }
-    printf("ciphertext: %s\n", text);
+    printf("ciphertext: %s\n" , text);
 }
 

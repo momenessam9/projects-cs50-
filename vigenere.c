@@ -39,10 +39,10 @@ int main(int argc, string argv[])
         if (islower(text[i]))
         {
             
-            int rot = j/strlen(argv[1]);
+            int rot = j / strlen(argv[1]);
             if (rot > 0)
             {
-                key = shift(argv[1][(j%strlen(argv[1]))]);
+                key = shift(argv[1][(j % strlen(argv[1]))]);
             }
             else
             {

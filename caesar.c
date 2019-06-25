@@ -31,24 +31,20 @@ int main(int argc, string argv[])
     {
         chr = text[i];
         cap = false;
-        printf("0yaay %c %i\n",  text[i], text[i]);
         if (isupper(text[i]))
         {
             cap = true;
             text[i] = tolower(text[i]);
-            printf("1yaay %c %i\n",  text[i], text[i]);
         }
         if (islower(text[i]))
         {
             int rem;
             chr = text[i] + key;
-            printf("2yaay %c %i\n",  chr, chr);
-                  
+               
             if (chr > 122)
             {
                 rem = chr - 122;
                 text[i] = 96 + rem;
-                printf("3yaay %c %i\n",  text[i], text[i]);
             }
             else
             {
@@ -57,7 +53,6 @@ int main(int argc, string argv[])
             if (cap)
             {
                 text[i] = toupper(text[i]);
-                printf("4yaay %c %i\n",  text[i], text[i]);
             }
         }
            

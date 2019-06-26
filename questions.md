@@ -32,20 +32,20 @@ biBitCount
 
 ## Why might `fopen` return `NULL` in `copy.c`?
 
-TODO
+means that the file might not exist or some permission error occurred while accessing a file
 
 ## Why is the third argument to `fread` always `1` in our code?
 
-TODO
+because we only need 1 sizeof()
 
 ## What value does `copy.c` assign to `padding` if `bi.biWidth` is `3`?
 
-TODO
+3  =4* 3*3   %4
 
 ## What does `fseek` do?
 
-TODO
+move the file position to a desired location within the file
 
 ## What is `SEEK_CUR`?
 
-TODO
+It moves file pointer position to given location

@@ -86,9 +86,9 @@ int main(int argc, char *argv[])
             }
             for (int c = 0; c < bi.biWidth; c++)
             {
-                fputc(fpixel[c][0] , outptr);
-                fputc(fpixel[c][1] , outptr);
-                fputc(fpixel[c][2] , outptr);
+                fputc(fpixel[c][0], outptr);
+                fputc(fpixel[c][1], outptr);
+                fputc(fpixel[c][2], outptr);
             }
         }
         if (n != 0)

@@ -70,9 +70,9 @@ int main(int argc, char *argv[])
             fread(&triple, sizeof(RGBTRIPLE), 1, inptr);
             for (int a = 0; a < n; a++)
             {
-                fpixel[sht][0] = triple.rgbtRed;
+                fpixel[sht][0] = triple.rgbtBlue;
                 fpixel[sht][1] = triple.rgbtGreen;
-                fpixel[sht][2] = triple.rgbtBlue;
+                fpixel[sht][2] = triple.rgbtRed;
                 fwrite(&triple, sizeof(RGBTRIPLE), 1, outptr);
 
                 sht++;

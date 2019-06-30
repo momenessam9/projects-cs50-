@@ -57,7 +57,7 @@ bool load(const char *dictionary)
             unload();
             return false;
         }
-        strcpy(newnode->word , word);
+        strcpy(newnode->word, word);
         newnode->next = hashtable[hash(word)];
         hashtable[hash(word)] = newnode;
         B++;

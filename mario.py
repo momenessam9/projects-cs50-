@@ -5,7 +5,8 @@ while True:
         break
     else:
         height = int(input("height: "))
-i = height-1
+        
+i = height - 1
 while (i != -1):
     
     for k in range(i):

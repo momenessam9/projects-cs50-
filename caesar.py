@@ -1,8 +1,8 @@
 from sys import argv
+from cs50 import get_string
 
 key = int(argv[1])
 key = key % 26
-from cs50 import get_string
 text = get_string("plaintext:  ")
 print("ciphertext: ", end="") 
 for c in text:

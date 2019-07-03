@@ -1,5 +1,5 @@
-from sys import argv
-height = int(argv[1])
+
+height = int(input("height: "))
 while True:
     if height > 0 and height <= 8:
         break
